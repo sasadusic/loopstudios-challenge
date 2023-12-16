@@ -1,0 +1,391 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+:root{
+    /* Primary */
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+p{
+    font-size: 15px;
+    color: var(--Dark-Gray);
+}
+.header, .main, .footer{
+    padding: 0 min(120px, 10vw);
+}
+.section{
+    min-height: 100vh;
+    margin: 120px 0;
+}
+.header{
+    padding: 40px min(120px, 10vw) min(120px, 10vw) min(120px, 10vw);
+    background-image: url(images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer{
+    background: var(--Black);
+    color: var(--White) !important;
+    padding: 32px min(120px, 10vw);
+}
+.heading{
+    font-size: min(70px, 8vw);
+    color: var(--White);
+    font-weight: 300;
+    line-height: min(74px, 8.2vw);
+    text-transform: uppercase;
+    padding: 40px 80px 40px 40px;
+    border: 2px solid var(--White);
+    width: max-content;
+    margin: 10vw 0 0 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hamburger{
+    width: 30px;
+    height: 30px;
+    background-image: url(images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    display: none;
+}
+.close{
+    background-image: url(images/icon-close.svg);
+}
+.links{
+    display: flex;
+}
+.link{
+    text-decoration: none;
+    color: var(--White);
+    margin-left: 2vw;
+}
+.about{
+    background-image: url(images/desktop/image-interactive.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.about-cont{
+    width: 50%;
+    background: var(--White);
+    padding: 60px 0 60px 60px;
+}
+.sub-header{
+    font-size: min(50px, 6vw);
+    font-weight: 300;
+    line-height: min(54px, 6.2vw);
+    text-transform: uppercase;
+}
+.mb-mid{
+    margin-bottom: 18px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+.item{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vw;
+    display: flex;
+    align-items: end;
+    padding: 24px;
+}
+.label{
+    color: var(--White);
+    font-size: min(50px, 6vw);
+    font-weight: 300;
+    line-height: min(54px, 6.2vw);
+    text-transform: uppercase;
+}
+.item-1{
+    grid-column: 1 / span 2;
+    padding: 24px 0;
+    height: 140px;
+}
+.item-2{
+    grid-column: 3 / span 2;
+    padding: 24px 0;
+    height: 140px;
+    display: flex;
+    justify-content: end;
+}
+.item-3{
+    background-image: url(images/desktop/image-deep-earth.jpg);
+}
+.item-4{
+    background-image: url(images/desktop/image-night-arcade.jpg);
+}
+.item-5{
+    background-image: url(images/desktop/image-soccer-team.jpg);
+}
+.item-6{
+    background-image: url(images/desktop/image-grid.jpg);
+}
+.item-7{
+    background-image: url(images/desktop/image-from-above.jpg);
+}
+.item-8{
+    background-image: url(images/desktop/image-pocket-borealis.jpg);
+}
+.item-9{
+    background-image: url(images/desktop/image-curiosity.jpg);
+}
+.item-10{
+    background-image: url(images/desktop/image-fisheye.jpg);
+}
+.btn{
+    text-transform: uppercase;
+    font-size: 18px;
+    border: none;
+    outline-color: none;
+    background: transparent;
+    border: 1px solid var(--Black);
+    padding: 12px 40px;
+    margin-bottom: 8px;
+}
+.btn:hover{
+    background: var(--Black);
+    color: var(--White);
+}
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-logo{
+    width: 120px;
+    height: 20px;
+    background-image: url(images/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 24px;
+}
+.footer-link{
+    text-decoration: none;
+    color: var(--White);
+    margin-right: 18px;
+}
+.footer-icons{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 18px;
+}
+.footer-icon{
+    width: 18px;
+    height: 18px;
+    margin-left: 12px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+.face{
+    background-image: url(images/icon-facebook.svg);
+}
+.twitter{
+    background-image: url(images/icon-twitter.svg);
+}
+.pin{
+    background-image: url(images/icon-pinterest.svg);
+}
+.insta{
+    background-image: url(images/icon-instagram.svg);
+}
+.footer-phar{
+    color: #8f8f8f;
+    margin: 32px 0;
+}
+.link.active-link, .footer-link.active-f-link,
+.link.active-link:hover, .footer-link.active-f-link:hover
+{
+    border-bottom: 2px solid var(--White);
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (width < 1200px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (width < 992px) {
+    .header, .main, .footer{
+        padding: 0  min(120px, 6vw) 0;
+    }
+    .footer{
+        padding-top: 32px;
+    }
+    .header{
+        background-image: url(images/mobile/image-hero.jpg);
+        
+    }
+    .navbar{
+        padding: 32px min(120px, 6vw) min(120px, 6vw) min(120px, 6vw);
+    }
+    .navbar.active-navbar{
+        background: #000;
+    }
+    .links.active-links{
+        display: block;
+        position: absolute;
+        top: 60px;
+        padding: 60px 18px 18px 18px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #000;
+    }
+    .links.active-links .link{
+        position: relative;
+        width: 100%;
+        display: block;
+        margin: 24px auto;
+    }
+    .section{
+        margin: 80px 0;
+    }
+    .logo-image{
+        height: 24px;
+    }
+    .links{
+        display: none;
+    }
+    .logo{
+        width: 100%;
+    }
+    #hamburger{
+        display: block;
+    }
+    .heading{
+        width: 90%;
+        padding: 5vw;
+        margin: 120px 6vw;
+        font-size: min(70px, 9vw)
+    }
+    .header{
+        padding: 0 0 6vw 0;
+    }
+    .about-cont{
+        width: 100%;
+        padding: 0 24px;
+        text-align: center !important;
+    }
+    .item{
+        grid-column: span 4;
+        height: 30vw;
+    }
+    .item-1{
+        height: 100px;
+        justify-content: center;
+    }
+    .item-2{
+        grid-row: 10;
+        height: 100px;
+        justify-content: center;
+    }
+    .item-3{
+        background-image: url(images/mobile/image-deep-earth.jpg);
+    }
+    .item-4{
+        background-image: url(images/mobile/image-night-arcade.jpg);
+    }
+    .item-5{
+        background-image: url(images/mobile/image-soccer-team.jpg);
+    }
+    .item-6{
+        background-image: url(images/mobile/image-grid.jpg);
+    }
+    .item-7{
+        background-image: url(images/mobile/image-from-above.jpg);
+    }
+    .item-8{
+        background-image: url(images/mobile/image-pocket-borealis.jpg);
+    }
+    .item-9{
+        background-image: url(images/mobile/image-curiosity.jpg);
+    }
+    .item-10{
+        background-image: url(images/desktop/image-fisheye.jpg);
+    }
+    .footer-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+    /* .footer-icons{
+        flex-direction: column;
+        align-items: center;
+    } */
+    .footer-link{
+        display: block;
+        margin: 8px auto;
+        text-align: center;
+    }
+    .footer-icons{
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (width < 768px) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (width < 576px) {}
